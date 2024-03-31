@@ -12,6 +12,7 @@ const { SuccessResponse, ErrorResponse } = require('../utils/common');
 }
  */
 async function createTodo(req, res) {
+    console.log("r",req.body)
     try {
         const Todo = await TodoService.createTodo({
             todo: req.body.todo,
