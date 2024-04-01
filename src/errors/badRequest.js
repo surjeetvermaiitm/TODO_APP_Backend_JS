@@ -1,5 +1,5 @@
-import { StatusCodes } from "http-status-codes";
-import GenericError from "./genericError";
+const {StatusCodes,ReasonPhrases} = require("http-status-codes");
+const GenericError = require("./genericError");
 
 export default class BadRequestError extends GenericError {
     constructor(reason = null) {
@@ -8,3 +8,5 @@ export default class BadRequestError extends GenericError {
 
     }
 }
+
+module.exports = BadRequestError;

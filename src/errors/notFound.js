@@ -1,5 +1,5 @@
-import { ReasonPhrases, StatusCodes } from "http-status-codes";
-import GenericError from "./genericError";
+const {StatusCodes,ReasonPhrases} = require("http-status-codes");
+const GenericError = require("./genericError");
 
 export default class NotFoundError extends GenericError {
     constructor(resourceName, property, propertyValue) {
@@ -8,3 +8,5 @@ export default class NotFoundError extends GenericError {
 
     }
 }
+
+module.exports = NotFoundError;

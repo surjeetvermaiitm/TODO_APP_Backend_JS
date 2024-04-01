@@ -23,7 +23,7 @@ const {host,username,password,database,port} = dbConfig;
 // }
 
 const sequelize = new Sequelize({
-  dialect: 'postgres',
+  dialect: 'mssql',
   host: host,
   username: username,
   password: password,

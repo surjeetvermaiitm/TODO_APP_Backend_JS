@@ -1,4 +1,4 @@
-export default class GenericError extends Error {
+class GenericError extends Error {
     constructor(statusCode, reason, errorMessage, name) {
         super(errorMessage);
         this.statusCode = statusCode;
@@ -7,3 +7,5 @@ export default class GenericError extends Error {
         this.errorMessage = errorMessage;
     }
 }
+
+module.exports = GenericError;

@@ -1,5 +1,5 @@
-import { ReasonPhrases, StatusCodes } from "http-status-codes";
-import GenericError from "./genericError";
+const {StatusCodes,ReasonPhrases} = require("http-status-codes");
+const GenericError = require("./genericError");
 
 export default class UnauthorisedError extends GenericError {
     constructor(message) {
@@ -7,3 +7,5 @@ export default class UnauthorisedError extends GenericError {
         super(StatusCodes.UNAUTHORIZED, ReasonPhrases.UNAUTHORIZED, errorMessage, "UnauthorisedError");
     }
 }
+
+module.exports = UnauthorisedError;
